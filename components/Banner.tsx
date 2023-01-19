@@ -5,14 +5,14 @@ const Banner = () => {
             lg:flex-row lg:space-x-5"
       >
         <div>
-          <h1 className="text-5xl text-gray-800">AD Performance Blog</h1>
+          <h1 className="text-5xl text-gray-800">True Facts Journal</h1>
           <h2
             className="mt-5
                 md:mt-8 text-gray-600"
           >
             Welcome to{" "}
             <span className="underline underline-offset-2 decoration-4 decoration-[#DC3933] text-gray-600">
-              the athlete
+              the facts
             </span>
             {""} blog, from the field to the blog.
           </h2>
@@ -23,7 +23,7 @@ const Banner = () => {
             {" "}
             ultimate resource
           </span>{" "}
-          for athlete training, development and nutrition.
+          for news readers.
         </p>
       </div>
     );
