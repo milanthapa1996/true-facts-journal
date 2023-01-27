@@ -12,7 +12,7 @@ const PostCard = ({ post }: Props) => {
     <div className="flex flex-col group cursor-pointer">
       <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
         <Image
-          className="object-cover object-left lg:object-center rounded-lg"
+          className="object-cover object-center lg:object-center rounded-lg"
           src={urlFor(post.mainImage).url()}
           alt={post.author.name}
           fill
