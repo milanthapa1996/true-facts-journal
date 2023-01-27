@@ -17,9 +17,9 @@ const PostCard = ({ post }: Props) => {
           alt={post.author.name}
           fill
         />
-        <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
-          <div>
-            <p className="font-bold">{post.title}</p>
+        <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5">
+          <div className="mb-1">
+            <p className="font-medium">{post.title}</p>
             <p>
               {new Date(post._createdAt).toLocaleDateString("en-US", {
                 day: "numeric",
@@ -30,7 +30,7 @@ const PostCard = ({ post }: Props) => {
           </div>
 
           <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-            {post.categories.map((category,index) => (
+            {post.categories.map((category, index) => (
               <div className="bg-[#DC3933] text-center text-white px-3 py-1 rounded-lg text-sm font-semibold]" key={index}>
                 <p>{category.title}</p>
               </div>
@@ -39,7 +39,7 @@ const PostCard = ({ post }: Props) => {
         </div>
       </div>
       <div className="mt-5 flex-1">
-        <p className="underline text-lg font-bold">{post.title}</p>
+        <p className="underline text-lg font-bold line-clamp-2">{post.title}</p>
         <p className="line-clamp-2 text-gray-500">{post.description}</p>
       </div>
       <p className="mt-5 font-bold flex items-center group-hover:underline">

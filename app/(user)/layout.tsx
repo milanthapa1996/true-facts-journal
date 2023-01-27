@@ -18,9 +18,10 @@ export default function RootLayout({
   const hideBanner = router?.startsWith("/post/") ? false : true;
   return (
     <html>
-      <body className="max-w-7xl mx-auto bg-[#F8F8F8] dark:bg-[#222] text-gray-800 ">
+      <body className="bg-[#F8F8F8] dark:bg-[#222] text-gray-800 ">
         <Providers>
-          {hideBanner && <Banner />}
+          {/* {hideBanner && <Banner />} */}
+          <Banner />
           <Header />
           {children}
           <Footer />

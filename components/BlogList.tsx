@@ -17,8 +17,8 @@ const BlogList = ({ posts }: Props) => {
 
   return (
     <div className="relative z-0 mt-10">
-      <h1 className="text-2xl px-10 mb-8 font-medium underline underline-offset-8 decoration-4 decoration-[#DC3933] text-gray-600">Trending Journal</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-10 gap-10 gap-y-16 pb-24">
+      <h1 className="text-2xl px-10 mb-8 font-medium underline underline-offset-8 decoration-4 decoration-[#DC3933] text-gray-600">Recent Journal</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10 gap-10 gap-y-16 pb-24">
         {items.map((item) => (
           <ClientSideRoute
             route={`/post/${item.slug.current}`}
