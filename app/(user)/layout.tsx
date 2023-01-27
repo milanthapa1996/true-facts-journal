@@ -20,8 +20,8 @@ export default function RootLayout({
     <html>
       <body className="max-w-7xl mx-auto bg-[#F8F8F8] dark:bg-[#222] text-gray-800 ">
         <Providers>
-          <Header />
           {hideBanner && <Banner />}
+          <Header />
           {children}
           <Footer />
         </Providers>

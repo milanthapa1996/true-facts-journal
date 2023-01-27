@@ -16,8 +16,7 @@ const BlogList = ({ posts }: Props) => {
   const items = showAll ? posts : posts.slice(0, 4);
 
   return (
-    <div className="relative z-0">
-      <hr className="border-[#DC3933] mb-10" />
+    <div className="relative z-0 mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
         {items.map((item) => (
           <ClientSideRoute
