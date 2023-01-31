@@ -18,7 +18,7 @@ const BlogList = ({ posts }: Props) => {
   return (
     <div className="relative z-0 mt-10">
       <h1 className="text-2xl px-10 mb-8 font-medium underline underline-offset-8 decoration-4 decoration-[#DC3933] text-gray-600">Recent Journal</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10 gap-10 gap-y-16 pb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-10 gap-10 gap-y-16 pb-24">
         {items.map((item) => (
           <ClientSideRoute
             route={`/post/${item.slug.current}`}
@@ -31,7 +31,7 @@ const BlogList = ({ posts }: Props) => {
       <div className="flex justify-center">
         <button
           type="button"
-          className="px-2 py-3 text-sm md:text-base bg-[#DC3933] text-[#FFF] hover:bg-[#c92f2a] flex items-center rounded-lg text-center"
+          className="px-4 py-3 text-sm md:text-base bg-sky-400/30 text-sky-600 hover:bg-sky-400/40 flex items-center rounded-3xl text-center hover:scale-105 transition-all duration-300"
           onClick={handleClick}
         >
           {showAll ? "All articles loaded" : "Load More Articles"}
