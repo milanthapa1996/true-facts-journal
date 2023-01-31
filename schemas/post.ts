@@ -31,8 +31,8 @@ export default defineType({
         source: "title",
         slugify: (input: string) => slug(input, { lower: true }),
       },
-      validation: (Rule) => Rule.required(),
       group: "general",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "author",
@@ -119,14 +119,11 @@ export default defineType({
     }),
     defineField({
       name: "keywords",
-      type: "array",
+      type: "text",
       title: "Keywords",
-      description: "Tags for your post",
-      of: [{ type: "string" }],
-      options: {
-        layout: "tags",
-      },
+      description: "Enter keywords separated by comma",
       group: "seo",
+      validation: (Rule) => Rule.required(),
     }),
   ],
   initialValue: () => ({

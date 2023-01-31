@@ -18,7 +18,7 @@ export default function Head() {
 
       {/* <!-- Twitter cards --> */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@truefactsjournal" />
+      <meta name="twitter:site" content="@true_f_journal" />
       <meta name="twitter:title" content="True Facts Journal" />
       <meta name="twitter:description" content="Stay informed with the latest, most accurate and verified information from the True Facts Journal. Read articles on a wide range of topics." />
       <meta name="twitter:image" content="https://res.cloudinary.com/duxolernw/image/upload/v1675161829/tfj_images/cover_fb_odqb9k.jpg" />
