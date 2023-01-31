@@ -10,7 +10,7 @@ interface Props {
 const PostCard = ({ post }: Props) => {
   return (
     <div className="flex flex-col group cursor-pointer">
-      <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
+      <div className="relative w-full h-64 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
         <Image
           className="object-cover object-center lg:object-center rounded-lg"
           src={urlFor(post.mainImage).url()}

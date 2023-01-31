@@ -11,7 +11,7 @@ const Banner = () => {
       <div>
         <Link href={"/"}>
           <Image
-            src="/images/tfj_logo.png"
+            src="https://res.cloudinary.com/duxolernw/image/upload/v1675161483/tfj_images/tfj_logo_mzexjf.png"
             alt="TFJ Logo"
             width={150}
             height={0}
