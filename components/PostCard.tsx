@@ -19,8 +19,8 @@ const PostCard = ({ post }: Props) => {
         />
         <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-sm  rounded drop-shadow-lg text-white p-5">
           <div className="mb-1">
-            <p className="font-medium text-sm">{post.title}</p>
-            <p className="text-sm font-medium">
+            <p className="font-bold text-xs">{post.title}</p>
+            <p className="text-xs text-gray-300">
               {new Date(post._createdAt).toLocaleDateString("en-US", {
                 day: "numeric",
                 month: "long",
@@ -29,9 +29,9 @@ const PostCard = ({ post }: Props) => {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
+          <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-start">
             {post.categories.map((category, index) => (
-              <div className="bg-[#DC3933] text-center text-white px-2 py-1 rounded-md text-sm font-semibold]" key={index}>
+              <div className="bg-sky-700 text-white p-1 rounded-sm text-xs" key={index}>
                 <p>{category.title}</p>
               </div>
             ))}
@@ -39,13 +39,9 @@ const PostCard = ({ post }: Props) => {
         </div>
       </div>
       <div className="mt-5 flex-1">
-        <p className="underline text-sm font-bold line-clamp-2">{post.title}</p>
-        <p className="line-clamp-2 text-gray-500">{post.description}</p>
+        <p className="underline text-sm font-bold line-clamp-2 dark:text-gray-200">{post.title}</p>
+        <p className="line-clamp-2 text-gray-700 dark:text-gray-300 text-xs mt-1">{post.metaDescription}</p>
       </div>
-      <p className="mt-5 font-bold flex items-center group-hover:underline text-sm">
-        Read Post
-        <ArrowUpRightIcon className="ml-2 h-4 w-4" />
-      </p>
     </div>
   );
 };

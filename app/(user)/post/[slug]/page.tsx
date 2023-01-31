@@ -68,11 +68,11 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <article className="px-10 pb-28">
-      <Link href="/" className="relative inline-block text-lg group mb-10 mt-10">
-        <span className="relative z-10 block px-2  py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white ">
+      <Link href="/" className="relative inline-block text-lg group mb-10 mt-6 md:mt-10">
+        <span className="relative z-10 block px-2  py-1 border-2 border-gray-900 rounded-lg dark:border-gray-300">
 
-          <span className="relative flex justify-center items-center text-gray-500">
-            <ChevronDoubleLeftIcon className="w-4 h-4 text-gray-900" />
+          <span className="relative flex justify-center items-center">
+            <ChevronDoubleLeftIcon className="w-4 h-4 text-gray-900 dark:text-gray-300" />
           </span>
         </span>
       </Link>
@@ -89,10 +89,10 @@ async function Post({ params: { slug } }: Props) {
           </div>
 
           <section className="p-5 bg-[#4c8fc0] w-full">
-            <div className="flex flex-col md:flex-row justify-between gap-y-5">
+            <div className="flex flex-col md:flex-row justify-between gap-y-4">
               <div>
-                <h1 className="text-4xl font-extrabold">{post.title}</h1>
-                <p>
+                <h1 className="text-lg md:text-xl lg:text-3xl font-extrabold">{post.title}</h1>
+                <p className="text-sm md:text-lg text-gray-200">
                   {new Date(post._createdAt).toLocaleDateString("en-US", {
                     day: "numeric",
                     month: "long",
@@ -120,7 +120,7 @@ async function Post({ params: { slug } }: Props) {
                 {post.categories.map((category) => (
                   <p
                     key={category._id}
-                    className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-semibold mt-4"
+                    className="bg-sky-700 text-white px-3 py-1 rounded-lg text-sm font-semibold mt-4"
                   >
                     {category.title}
                   </p>

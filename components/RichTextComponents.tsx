@@ -6,7 +6,7 @@ export const RichTextComponents = {
   types: {
     image: ({ value }: any) => {
       return (
-        <div className="relative w-full h-96 m-10 mx-auto">
+        <div className="relative w-full h-96 m-4 mx-auto">
           <Image
             className="object-contain"
             src={urlFor(value).url()}
@@ -19,7 +19,7 @@ export const RichTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => (
-      <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>
+      <ul className="ml-10 py-5 list-disc space-y-5 marker:text-sky-400">{children}</ul>
     ),
     number: ({ children }: any) => (
       <ol className="mt-lg list-decimal">{children}</ol>
@@ -27,16 +27,19 @@ export const RichTextComponents = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 className="text-5xl py-10 font-bold">{children}</h1>
+      <h1 className="text-4xl py-4 font-bold dark:text-gray-200 pr-2">{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="text-4xl py-10 font-bold">{children}</h2>
+      <h2 className="text-2xl py-4 font-semibold dark:text-gray-200 pr-2">{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="text-3xl py-10 font-bold">{children}</h3>
+      <h3 className="text-xl py-4 font-semibold dark:text-gray-200 pr-2">{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="text-2xl py-10 font-bold">{children}</h4>
+      <h4 className="text-lg py-4 font-semibold dark:text-gray-200 pr-2">{children}</h4>
+    ),
+    normal: ({ children }: any) => (
+      <p className="text-sm font-normal pr-2 text-gray-700 dark:text-gray-200 text-justify selection:bg-sky-400/30 selection:text-sky-600">{children}</p>
     ),
 
     blockquote: ({ children }: any) => (

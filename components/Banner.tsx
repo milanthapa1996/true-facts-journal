@@ -20,7 +20,7 @@ const Banner = () => {
         </Link>
 
         <h2
-          className="mt-5 text-gray-600"
+          className="mt-5 text-gray-600 dark:text-gray-200 text-sm md:text-lg"
         >
           Welcome to{" "}
           <Link href={"/"}>
